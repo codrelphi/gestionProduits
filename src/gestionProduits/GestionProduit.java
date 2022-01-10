@@ -54,6 +54,8 @@ public class GestionProduit {
 				gDescription = sc.nextLine();
 				sc.nextLine();
 				
+				System.out.println("Description: " + gDescription);
+				
 				System.out.print("Entrer prix du produit: ");
 				gPrix = sc.nextDouble();
 				
@@ -81,8 +83,20 @@ public class GestionProduit {
 				break;
 			case "quitter":
 				//quitter
-				System.out.println("Au revoir !");
-				System.exit(0);
+				char repChar;
+				do {
+					System.out.print("Voulez-vous vraiment quitter ? (O/N)");
+					String rep = sc.next().toUpperCase();
+					repChar = rep.charAt(0);
+					if(repChar == 'O') {
+						System.out.println("Au revoir !");
+						System.exit(0);
+					}
+					if (repChar == 'N') {
+						menu();
+					}
+					
+				} while(repChar != 'O' && repChar != 'N');
 				break;
 			default:
 				System.out.println("Veuillez faire un choix !");
