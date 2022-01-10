@@ -30,13 +30,13 @@ public class GestionProduit {
 			reponse = sc.next();
 			reponse = reponse.trim().toLowerCase();
 			leTest = !(reponse.equals("liste") || reponse.equals("ajoute") || reponse.equals("suppr") || reponse.equals("aide") || reponse.equals("quitter"));
-			//System.out.println("<< " + leTest + ">>");
+
 		} while (leTest);
 		
-		//return reponse;
 		switch (reponse) {
 			case "liste":
 				//afficher la liste
+				
 				if (produits.isEmpty()) {
 					System.out.println("Il n'y a aucun produit. Veuillez ajouter un produit");
 				}
@@ -49,14 +49,13 @@ public class GestionProduit {
 				break;
 			case "ajoute":
 				// ajouter
+				
 				System.out.print("\nEntrer code du produit: ");
 				gCode = sc.next();
 			
 				System.out.print("Entrer description du produit: ");
 				gDescription = sc.nextLine();
 				sc.nextLine();
-				
-				//System.out.println("Description: " + gDescription);
 				
 				System.out.print("Entrer prix du produit: ");
 				gPrix = sc.nextDouble();
@@ -72,19 +71,20 @@ public class GestionProduit {
 				}
 				
 				System.out.println(messageAfficher);
-				//reponse = menu();
-				
-				
+
 				break;
 			case "suppr":
 				//supprimer
+				
 				break;
 			case "aide":
 				//afficher l'aide (cad le menu)
+				
 				menu();
 				break;
 			case "quitter":
 				//quitter
+				
 				char repChar;
 				do {
 					System.out.print("Voulez-vous vraiment quitter ? (O/N)");
@@ -108,15 +108,7 @@ public class GestionProduit {
 	}
 	public static void main(String[] args) {
 		
-		//String reponse;
-		//reponse = menu();
-		//System.out.println("\n\nVotre réponse est: " + reponse);
-	
-		/*String gCode, gDescription;
-		double gPrix;*/
-		
 		menu();
-		
-		
+
 	}
 }
