@@ -61,6 +61,9 @@ public class GestionProduit {
 				gPrix = sc.nextDouble();
 				
 				Produit tempProduit = new Produit(gCode, gDescription, gPrix);
+				System.out.println("Code: " + gCode);
+				System.out.println("Description: " + gDescription);
+				System.out.println("Prix: " + gPrix);
 				
 				String messageAfficher = "";
 				if(produits.add(tempProduit)) {
@@ -76,11 +79,21 @@ public class GestionProduit {
 			case "suppr":
 				//supprimer
 				
+				if(produits.isEmpty()) {
+					System.out.println("Liste vide: il n'y a aucun produit !");
+				}
+				else {
+					System.out.print("Quel est le code du produit à supprimer ? ");
+					gCode = sc.next();
+					System.out.println("Code: " + gCode);
+				}
+				
 				break;
 			case "aide":
 				//afficher l'aide (cad le menu)
 				
 				menu();
+				
 				break;
 			case "quitter":
 				//quitter
@@ -99,6 +112,7 @@ public class GestionProduit {
 					}
 					
 				} while(repChar != 'O' && repChar != 'N');
+				
 				break;
 			default:
 				System.out.println("Veuillez faire un choix !");
@@ -106,6 +120,7 @@ public class GestionProduit {
 		}
 		menu();
 	}
+	
 	public static void main(String[] args) {
 		
 		menu();
