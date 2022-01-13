@@ -38,7 +38,7 @@ public class GestionProduit {
 				//afficher la liste
 				
 				if (produits.isEmpty()) {
-					System.out.println("Il n'y a aucun produit. Veuillez ajouter un produit");
+					System.out.println("\nIl n'y a aucun produit. Veuillez ajouter un produit\n");
 				}
 				else {
 					System.out.println("LISTE DES PRODUITS");
@@ -80,7 +80,7 @@ public class GestionProduit {
 				//supprimer
 				
 				if(produits.isEmpty()) {
-					System.out.println("Liste vide: il n'y a aucun produit !");
+					System.out.println("\nIl n'y a aucun produit en stock !\n");
 				}
 				else {
 					System.out.print("Quel est le code du produit à supprimer ? ");
