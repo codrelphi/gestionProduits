@@ -85,7 +85,24 @@ public class GestionProduit {
 				else {
 					System.out.print("Quel est le code du produit à supprimer ? ");
 					gCode = sc.next();
-					System.out.println("Code: " + gCode);
+					//System.out.println("Code: " + gCode);
+					int nbrProduit = 0;
+					int pos = 0;
+					for (int i = 0; i < produits.size(); i++) {
+						if (produits.get(i).getCode().equals(gCode)) {
+							nbrProduit++;
+							pos = i;
+						}
+					}
+					
+					if (nbrProduit > 0) {
+						System.out.println("\nLe produit existe\n");
+						produits.remove(pos);
+					}
+					else {
+						System.out.println("\nLe produit n'existe pas\n");
+					}
+					
 				}
 				
 				break;
