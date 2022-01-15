@@ -26,6 +26,7 @@ public class GestionProduit {
 			System.out.println("suppr\t - Supprime un produit");
 			System.out.println("aide\t - Affiche ce menu");
 			System.out.println("quitter\t - Quitte l'application");
+			System.out.println("\nNB: Utiliser , plutôt que . pour la virgule. Ex: 12,5");
 			System.out.print("\nEntrer une commande: ");
 			reponse = sc.next();
 			reponse = reponse.trim().toLowerCase();
