@@ -42,9 +42,10 @@ public class GestionProduit {
 					System.out.println("\nIl n'y a aucun produit. Veuillez ajouter un produit\n");
 				}
 				else {
-					System.out.println("LISTE DES PRODUITS");
+					System.out.println("\nLISTE DES PRODUITS");
+					System.out.println("Code \t Description \t Prix");
 					for (Produit p : produits) {
-						System.out.println(p.getCode() + "\t" + p.getDescription() + "\t" + p.getPrix());
+						System.out.println(p.getCode() + "\t\t" + p.getDescription() + "\t" + p.getPrix());
 					}
 				}
 				break;
